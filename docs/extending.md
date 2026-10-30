@@ -1,5 +1,8 @@
 # Extending the template
 
+To add a route, start with [add-endpoint.md](add-endpoint.md). It covers the
+model, handler, metadata, validation, and Swagger in one pass.
+
 Everything below is intentionally absent. These are the insertion points, so a
 feature can be added without moving the existing structure.
 

@@ -71,6 +71,12 @@ cd examples
 ./curl.sh
 ```
 
+## Add your own endpoint
+
+[docs/add-endpoint.md](docs/add-endpoint.md) walks through adding a new route
+group, from the request model and handler to validation, Swagger metadata, and a
+curl test, plus when to extract logic into a service.
+
 ## Deploy to Vercel
 
 One-time project setup, then deploy:
@@ -167,6 +173,7 @@ without restructuring the app.
 
 ## Documentation
 
+- [Add an endpoint](docs/add-endpoint.md)
 - [Architecture](docs/architecture.md)
 - [Configuration](docs/configuration.md)
 - [Deploy to Vercel](docs/deploy-vercel.md)

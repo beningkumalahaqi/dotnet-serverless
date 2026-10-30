@@ -39,6 +39,8 @@ so the app serves plain HTTP and never calls `UseHttpsRedirection` or `UseHsts`.
 There are no controllers, repositories, or layers. Add them only when a feature
 needs them; the endpoint and DI extension points do not have to move.
 
+To add a route, see [add-endpoint.md](add-endpoint.md).
+
 ## Middleware order
 
 `UseApiPipeline` applies middleware in this order:
