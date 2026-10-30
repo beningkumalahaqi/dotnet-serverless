@@ -4,6 +4,8 @@ A minimal ASP.NET Core 10 HTTP API packaged as a portable container. It runs on
 [Vercel Container Runtime](https://vercel.com/docs/functions/runtimes/container)
 and on any Docker/OCI host, and it includes OpenAPI plus Swagger UI out of the box.
 
+**Live demo:** <https://dotnet-serverless.vercel.app/>
+
 Nothing here is Vercel-specific except `vercel.json` and `docs/deploy-vercel.md`.
 The app follows a plain container contract: listen on `0.0.0.0:$PORT`, log to
 stdout, handle `SIGTERM`, keep no local state, and expose `GET /health`.
