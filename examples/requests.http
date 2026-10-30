@@ -1,0 +1,43 @@
+# VS Code REST Client, Visual Studio, or JetBrains HTTP client.
+# Select a request and send it. Change @host to test a deployment.
+@host = http://localhost:8080
+# @host = https://your-project.vercel.app
+
+### Service metadata
+GET {{host}}/
+
+### Liveness
+GET {{host}}/health
+
+### Greeting (default language)
+GET {{host}}/api/v1/examples/hello/Ada
+
+### Greeting (query parameter)
+GET {{host}}/api/v1/examples/hello/Ada?lang=es
+
+### Echo a valid body
+POST {{host}}/api/v1/examples/echo
+Content-Type: application/json
+
+{
+  "message": "hello from the boilerplate",
+  "priority": 2
+}
+
+### Echo an invalid body (expect 400 ProblemDetails)
+POST {{host}}/api/v1/examples/echo
+Content-Type: application/json
+
+{
+  "message": "",
+  "priority": 9
+}
+
+### Inspect the current instance
+GET {{host}}/api/v1/examples/runtime
+
+### Throw on purpose (expect 500 ProblemDetails)
+GET {{host}}/api/v1/examples/error
+
+### OpenAPI document
+GET {{host}}/openapi/v1.json
